@@ -1,0 +1,121 @@
+body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #4a90e2, #ffffff);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+      text-align: center;
+    }
+    .logo {
+      max-width: 180px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-weight: 400;
+      font-size: 3rem;
+      margin: 5px 0 20px;
+      color: #d17e4f; /* warm accent */
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+    }
+    .tagline {
+      font-family: 'Great Vibes', cursive;
+      font-size: 1.8rem;
+      font-style: italic;
+      margin-bottom: 30px;
+      color: #222;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.7);
+    }
+    .contacts {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .contact-link {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+      padding: 15px 20px;
+      width: 140px;
+      text-decoration: none;
+      color: #d17e4f;
+      font-weight: 600;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 1rem;
+      font-family: 'Poppins', sans-serif;
+    }
+    .contact-link:hover {
+      background: #d17e4f;
+      color: #fff;
+    }
+    .contact-icon {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+  .contacts {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .contact-link {
+    border-radius: 10px;
+    padding: 15px 20px;
+    width: 140px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+  }
+
+  /* Instagram gradient background */
+  .contact-link.instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  }
+  .contact-link.instagram:hover {
+    filter: brightness(1.1);
+  }
+
+  /* Facebook blue */
+  .contact-link.facebook {
+    background-color: #1877f2;
+  }
+  .contact-link.facebook:hover {
+    filter: brightness(1.1);
+  }
+
+  /* Gmail red */
+  .contact-link.email {
+    background-color: #d93025;
+  }
+  .contact-link.email:hover {
+    filter: brightness(1.1);
+  }
+
+  /* Phone green */
+  .contact-link.phone {
+    background-color: #25d366;
+  }
+  .contact-link.phone:hover {
+    filter: brightness(1.1);
+  }
+
+  .contact-icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
