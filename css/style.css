@@ -1,121 +1,150 @@
+/* Reset & base */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: idden;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+/* Background Slideshow */
 body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom, #4a90e2, #ffffff);
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      align-items: center;
-      justify-content: center;
-      color: #333;
-      text-align: center;
-    }
-    .logo {
-      max-width: 180px;
-      margin-bottom: 10px;
-    }
-    h1 {
-      font-family: 'Great Vibes', cursive;
-      font-weight: 400;
-      font-size: 3rem;
-      margin: 5px 0 20px;
-      color: #d17e4f; /* warm accent */
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
-    }
-    .tagline {
-      font-family: 'Great Vibes', cursive;
-      font-size: 1.8rem;
-      font-style: italic;
-      margin-bottom: 30px;
-      color: #222;
-      text-shadow: 1px 1px 1px rgba(255,255,255,0.7);
-    }
-    .contacts {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .contact-link {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
-      padding: 15px 20px;
-      width: 140px;
-      text-decoration: none;
-      color: #d17e4f;
-      font-weight: 600;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-size: 1rem;
-      font-family: 'Poppins', sans-serif;
-    }
-    .contact-link:hover {
-      background: #d17e4f;
-      color: #fff;
-    }
-    .contact-icon {
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
-  .contacts {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: bgSlide 48s infinite;
+  transition: background-image 1s;
+}
+
+/* Background animation keyframes for 12 images */
+@keyframes bgSlide {
+  0% { background-image: url('../images/bg1.PNG'); }
+  8.33% { background-image: url('../images/bg10.JPG'); }
+  16.66% { background-image: url('../images/bg11.JPG'); }
+  25% { background-image: url('../images/bg12.JPG'); }
+  33.33% { background-image: url('../images/bg2.PNG'); }
+  41.66% { background-image: url('../images/bg3.PNG'); }
+  50% { background-image: url('../images/bg4.PNG'); }
+  58.33% { background-image: url('../images/bg5.JPG'); }
+  66.66% { background-image: url('../images/bg6.JPG'); }
+  75% { background-image: url('../images/bg7.JPG'); }
+  83.33% { background-image: url('../images/bg7.JPG'); }
+  91.66% { background-image: url('../images/bg8.JPG'); }
+  100% { background-image: url('../images/bg9.JPG'); }
+}
+
+/* Optional dark overlay to improve text contrast */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Content container - centered */
+.content {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  max-width: 90vw;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Logo */
+.logo {
+  width: 260px;
+  margin-bottom: 0px;
+}
+
+/* Heading */
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3em;
+  margin: 0px 0;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+/* Tagline */
+.tagline {
+  font-size: 1.2em;
+  color: #eee;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+}
+
+/* Contacts container */
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Contact links */
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 200px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Hover effect */
+.contact-link:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Icons inside links */
+.contact-icon {
+  font-size: 1.4em;
+}
+
+/* Platform-specific backgrounds */
+.instagram {
+  background: linear-gradient(45deg, #feda75, #d62976, #962fbf, #4f5bd5);
+  box-shadow: 0 0 8px #962fbf;
+}
+
+.tiktok {
+  background: linear-gradient(45deg, #25f4ee, #ff0050, #000000);
+  box-shadow: 0 0 8px #ff0050;
+}
+
+.email {
+  background-color: #d44638;
+  box-shadow: 0 0 8px #d44638;
+}
+
+.whatsapp {
+  background: linear-gradient(45deg, #25D366, #128C7E);
+  color: white;
+  box-shadow: 0 0 8px #25D366;
+}
+
+.whatsapp:hover {
+  filter: brightness(1.1);
+}
+
+
+/* Responsive: On small screens make buttons wider */
+@media (max-width: 450px) {
   .contact-link {
-    border-radius: 10px;
-    padding: 15px 20px;
-    width: 140px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+    min-width: 90vw;
   }
-
-  /* Instagram gradient background */
-  .contact-link.instagram {
-    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-  }
-  .contact-link.instagram:hover {
-    filter: brightness(1.1);
-  }
-
-  /* Facebook blue */
-  .contact-link.facebook {
-    background-color: #1877f2;
-  }
-  .contact-link.facebook:hover {
-    filter: brightness(1.1);
-  }
-
-  /* Gmail red */
-  .contact-link.email {
-    background-color: #d93025;
-  }
-  .contact-link.email:hover {
-    filter: brightness(1.1);
-  }
-
-  /* Phone green */
-  .contact-link.phone {
-    background-color: #25d366;
-  }
-  .contact-link.phone:hover {
-    filter: brightness(1.1);
-  }
-
-  .contact-icon {
-    font-size: 24px;
-    margin-bottom: 8px;
-  }
+}
